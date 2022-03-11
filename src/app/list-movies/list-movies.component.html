@@ -1,0 +1,12 @@
+<div class="list-group" *ngIf="selectedMovie == null">
+    <button class="list-group-item" active *ngFor="let movie of movies" (click)="onSelectedMovie(movie)">
+        <table align="center">
+            <tr>
+                
+                <td>{{movie.Title}} ${{movie.Price}}</td>
+            </tr>
+        </table>
+    </button>
+</div>
+
+<app-display-movie *ngIf="selectedMovie" [movie]="selectedMovie"></app-display-movie>

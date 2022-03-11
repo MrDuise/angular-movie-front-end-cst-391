@@ -1,0 +1,38 @@
+<div align="center">
+    <div class="card mb-6" style="max-width: 500px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <div style="height: 150px; width: 150px; overflow: hidden;">
+            <img src="https://via.placeholder.com/150" class="card-img" alt="{{movie.Title}}" width="150px" height="150px">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{movie.Title}}</h5>
+                <p class="card-text">{{movie.Genre}}</p>
+                <p class="card-text"><small class="text-muted">{{movie.Price}}</small> </p>
+                <table>
+                    <tr>
+                        <td width="50px" align="center">
+                            <a href="#" data-toggle="collapse" data-target="#collapseTracks" aria-expanded="false" aria-controls="collapseTracks"></a>
+                        </td>
+                        <td [width]="50" align="center">
+                            <a [routerLink]="['/edit',  movie.Id]"><i class="fa fa-edit"></i></a>
+                           
+                        </td>
+                        <td [width]="50" align="center">
+                            <a [routerLink]="['/delete', movie.Id]" ><i class="fa fa-trash"></i></a>
+                            
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+

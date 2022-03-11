@@ -1,0 +1,30 @@
+<h1>Edit Album</h1>
+
+
+
+  <form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+    <div class="form-group">
+      <label for="quantity">Edit Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="newName"
+        required
+        [placeholder]="title"
+        [(ngModel)]="newTitle"
+        name="newName"
+      />
+
+      <label for="quantity">Edit Price</label>
+      <input
+        type="number"
+        class="form-control"
+        id="newPrice"
+        [placeholder]="price"
+        [(ngModel)]="newPrice"
+        name="newPrice"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Edit</button>
+  </form>

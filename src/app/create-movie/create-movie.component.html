@@ -1,0 +1,51 @@
+<h1>Create New Album</h1>
+
+
+
+
+
+  
+  <form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+    <div class="form-group">
+      <label for="title">Enter Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)]="title"
+        name="title"
+      />
+      <label for="genre">Enter Genre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="genre"
+        required
+        [(ngModel)]="genre"
+        name="genre"
+      />
+      <label for="price">Enter Price</label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        required
+        [(ngModel)]="price"
+        name="price"
+      />
+      <label for="quantity">Enter Quantity</label>
+      <input
+        type="number"
+        class="form-control"
+        id="quantity"
+        required
+        [(ngModel)]="quantity"
+        name="quantity"
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+  </form>
+
+
+  <app-display-movie *ngIf="selectedMovie" [movie]="selectedMovie"></app-display-movie>
